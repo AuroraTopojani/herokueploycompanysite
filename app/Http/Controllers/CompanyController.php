@@ -10,7 +10,7 @@ class CompanyController extends Controller
 {
     public function index(): AnonymousResourceCollection
     {
-        $companies=Company::query();
+        $companies=Company::all();
 
         return JsonResource::collection($companies);
     }
